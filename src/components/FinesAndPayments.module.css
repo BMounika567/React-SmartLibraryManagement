@@ -1,0 +1,48 @@
+/* Luxury dropdown styling with smooth transitions */
+.luxurySelect {
+  padding: 0.85rem 1.25rem;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-width: 180px;
+  letter-spacing: 0.3px;
+}
+
+.luxurySelect:hover {
+  border-color: #000000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+}
+
+.luxurySelect:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.luxurySelect option {
+  padding: 1.2rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  background: white;
+  color: #000000;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.luxurySelect option:hover {
+  background: #f3f4f6;
+  color: #000000;
+}
+
+.luxurySelect option:checked {
+  background: #000000;
+  color: white;
+}

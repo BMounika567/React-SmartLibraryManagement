@@ -1,0 +1,37 @@
+.admin-dashboard-wrapper {
+  background: #E3EED4 !important;
+  min-height: 100vh !important;
+  font-family: 'Inter', sans-serif !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.admin-dashboard-wrapper * {
+  box-sizing: border-box !important;
+}
+
+.admin-dashboard-wrapper .container {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.admin-dashboard-wrapper .btn {
+  all: unset !important;
+}
+
+.admin-dashboard-wrapper table {
+  border-collapse: collapse !important;
+}
+
+.admin-dashboard-wrapper .tabs {
+  display: flex !important;
+  gap: 2px !important;
+  flex-wrap: wrap !important;
+}
+
+.admin-dashboard-wrapper .tabs button {
+  all: unset !important;
+  cursor: pointer !important;
+}

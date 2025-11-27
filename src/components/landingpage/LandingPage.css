@@ -1,0 +1,112 @@
+.landing-page {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(248, 249, 250, 0.95) !important;
+}
+
+.navbar-brand {
+  font-size: 1.8rem !important;
+  color: #1976d2 !important;
+}
+
+.nav-link {
+  color: #333 !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #1976d2 !important;
+}
+
+/* Hero Section */
+.hero-section {
+  padding-top: 80px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+/* Animations */
+.hero-text {
+  animation: slideInLeft 1s ease-out;
+}
+
+.hero-image {
+  animation: slideInRight 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hero Title */
+.hero-title {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  color: #2c3e50;
+}
+
+.hero-description {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #6c757d;
+}
+
+/* Button Hover Effects */
+.hero-button {
+  transition: all 0.3s ease !important;
+}
+
+/* Image Styling */
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+  }
+  
+  .hero-section {
+    padding-top: 100px;
+  }
+  
+  .hero-text {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}

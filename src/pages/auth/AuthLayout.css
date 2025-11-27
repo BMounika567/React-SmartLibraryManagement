@@ -1,0 +1,350 @@
+/* Auth Layout Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.auth-container {
+  min-height: 100vh;
+  background: #13312A !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.auth-wrapper {
+  display: flex;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Left Card */
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #13312A, #155446);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border: 2px solid #C69A72;
+}
+
+.logo-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #13312A;
+  line-height: 1.2;
+}
+
+.illustration-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: radial-gradient(ellipse at center, rgba(198, 154, 114, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  margin: 20px 0;
+  min-height: 300px;
+}
+
+.tree-illustration {
+  font-size: 120px;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.characters {
+  display: flex;
+  gap: 15px;
+  font-size: 24px;
+}
+
+.char1, .char2, .char3 {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.char2 {
+  animation-delay: 0.3s;
+}
+
+.char3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+.copyright {
+  font-size: 10px;
+  color: #155446;
+  text-align: left;
+  margin-top: auto;
+}
+
+/* Right Form Panel */
+.auth-form-panel {
+  width: 100%;
+  background: linear-gradient(135deg, #F6E9CA 0%, rgba(246, 233, 202, 0.95) 100%);
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.8s ease-out;
+  border-radius: 20px;
+  border: 2px solid #C69A72;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.auth-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #13312A;
+  margin: 0 0 40px 0;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #13312A;
+}
+
+.pill-input {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(198, 154, 114, 0.5);
+  border-radius: 25px;
+  padding: 14px 20px;
+  font-size: 14px;
+  color: #13312A;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.pill-input::placeholder {
+  color: rgba(19, 49, 42, 0.6);
+}
+
+.pill-input:focus {
+  border-color: #C69A72;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 2px rgba(198, 154, 114, 0.3);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.password-toggle:hover {
+  opacity: 1;
+}
+
+.forgot-link {
+  color: #155446;
+  text-decoration: none;
+  font-size: 12px;
+  text-align: right;
+  margin-top: -10px;
+  transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+  color: #13312A;
+}
+
+.login-btn {
+  background: linear-gradient(135deg, #13312A 0%, #155446 100%);
+  border: 2px solid #C69A72;
+  border-radius: 25px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #F6E9CA;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.login-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #155446 0%, #13312A 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(198, 154, 114, 0.4);
+}
+
+.login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-links {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #13312A;
+}
+
+.register-link {
+  color: #155446;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.register-link:hover {
+  color: #13312A;
+}
+
+.terms-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.terms-link a {
+  color: rgba(19, 49, 42, 0.7);
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.3s ease;
+}
+
+.terms-link a:hover {
+  color: #13312A;
+}
+
+.contact-info {
+  margin-top: auto;
+  padding-top: 30px;
+  font-size: 10px;
+  color: rgba(19, 49, 42, 0.6);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-wrapper {
+    flex-direction: column;
+    max-width: 400px;
+    border-radius: 20px;
+  }
+  
+  .auth-card {
+    clip-path: none;
+    border-radius: 20px 20px 0 0;
+    padding: 30px 20px;
+  }
+  
+  .auth-form-panel {
+    flex: none;
+    border-radius: 0 0 20px 20px;
+    padding: 30px 20px;
+  }
+  
+  .illustration-area {
+    min-height: 200px;
+  }
+  
+  .tree-illustration {
+    font-size: 80px;
+  }
+  
+  .characters {
+    font-size: 20px;
+  }
+  
+  .auth-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 10px;
+  }
+  
+  .auth-card {
+    padding: 20px 15px;
+  }
+  
+  .auth-form-panel {
+    padding: 25px 15px;
+  }
+  
+  .tree-illustration {
+    font-size: 60px;
+  }
+  
+  .characters {
+    font-size: 18px;
+    gap: 10px;
+  }
+}
